@@ -1,0 +1,49 @@
+{% set day_of_week = {
+    "0": "domingo",
+    "1": "lunes",
+    "2": "martes",
+    "3": "miércoles",
+    "4": "jueves",
+    "5": "viernes",
+    "6": "sabado"
+    }[weekday] | default("")
+-%}
+
+{% set month_word = {"01": "enero", "02": "febrero", "03": "marzo", "04": "abril", "05": "mayo", "06": "junio", "07": "julio", "08": "agosto", "09": "septiembre", "10": "octubre", "11": "noviembre", "12": "diciembre"}[month] | default("") -%}
+
+{% set day_month_formated = {
+    "01": "uno",
+    "02": "ds",
+    "03": "tres",
+    "04": "cuatro",
+    "05": "cinco",
+    "06": "seis",
+    "07": "siete",
+    "08": "ocho",
+    "09": "nueve",
+    "10": "diez",
+    "11": "once",
+    "12": "doce",
+    "13": "trece",
+    "14": "catorce",
+    "15": "quince",
+    "16": "dieciséis",
+    "17": "diecisiete",
+    "18": "dieciocho",
+    "19": "diecinueve",
+    "20": "veinte",
+    "21": "veintiuno",
+    "22": "veintidos",
+    "23": "veintitres",
+    "24": "veinticuatro",
+    "25": "veinticinco",
+    "26": "veintiséis",
+    "27": "veintisiete",
+    "28": "veintiocho",
+    "29": "veintinueve",
+    "30": "treinta",
+    "31": "treintaiuno",
+
+}[day_month] | default("") -%}
+
+Hoy es {{ day_of_week }}, día {{ day_month_formated }} de {{ month_word }} del año  {{ year }}

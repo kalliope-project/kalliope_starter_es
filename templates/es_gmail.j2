@@ -1,0 +1,9 @@
+Tienes {{ unread }} correos
+
+{% set count = 1 %}
+{% if unread > 0 %}
+    {% for subject in subjects %}
+     correos {{ count }}. {{ subject }}
+     {% set count = count + 1 %}
+    {% endfor %}
+{% endif %}

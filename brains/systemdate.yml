@@ -1,0 +1,23 @@
+---
+
+  - name: "say-local-date"
+    signals:
+      - order: "qué hora es"
+    neurons:
+      - systemdate:
+          say_template:
+            - "son las {{ hours }} y {{ minutes }} minutos"
+
+  - name: "say-local-date-from-template"
+    signals:
+      - order: "en qué fecha estamos"
+    neurons:
+      - systemdate:
+          file_template: "templates/systemdate_template.j2"
+
+  - name: "tea-time"
+    signals:
+      - order: "es la hora del té"
+    neurons:
+      - systemdate:
+          file_template: "templates/systemdate_template_tea.j2"

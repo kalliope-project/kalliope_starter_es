@@ -1,0 +1,7 @@
+---
+  - name: "say-hello"
+    signals:
+      - order: "Hola"
+    neurons:
+      - say:
+          message: "Hola {{name}}"

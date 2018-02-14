@@ -1,0 +1,39 @@
+---
+  - name: "synapse1"
+    signals:
+      - order: "hazme una pregunta"
+    neurons:
+      - say:
+          message: "te gustan las papas fritas?"
+      - neurotransmitter:
+          from_answer_link:
+            - synapse: "synapse2"
+              answers:
+                - "absolutamente"
+                - "por supuesto"
+            - synapse: "synapse3"
+              answers:
+                - "no me gusta"
+          default: "synapse4"
+
+  - name: "synapse2"
+    signals:
+      - order: "synapse2"
+    neurons:
+      - say:
+          message: "Te gustan las papas fritas! A mí también!"
+
+
+  - name: "synapse3"
+    signals:
+      - order: "synapse3"
+    neurons:
+      - say:
+          message: "No te gustan las papas fritas."
+
+  - name: "synapse4"
+    signals:
+      - order: "synapse4"
+    neurons:
+      - say:
+          message: "No entiendo tu respuesta"

@@ -1,0 +1,12 @@
+{% if returncode == "DisambiguationError" %}
+    Busco en las páginas del tema
+    {% if may_refer is not none %}
+        {% for page in may_refer %}
+            {{ page }}
+        {% endfor %}
+    {% endif %}
+{% elif returncode == "PageError" %}
+    No he encontrado nada respecto a ese tema
+{% else %}
+    {{ summary }}
+{% endif %}
