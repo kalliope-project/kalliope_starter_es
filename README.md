@@ -3,7 +3,7 @@
 
 This starter kit has been tested with Kalliope v0.5.0.
 
-# kalliope starter config en
+# kalliope starter config es
 
 This is an out of the box working configuration for spanish kalliope user
 
